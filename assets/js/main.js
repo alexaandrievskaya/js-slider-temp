@@ -5,9 +5,7 @@ carousel.init();
 
 
 
-
-
-//(function () {
+//(function (time) {
 //    let container = document.querySelector('#carousel');
 //    let slides = container.querySelectorAll('.slide');
 //    let indicatorContainer = container.querySelector('#indicators-container');
@@ -26,7 +24,7 @@ carousel.init();
 //    let currentSlide = 0;
 //    let timerID = null;
 //    let slidesCount = slides.length;
-//    let interval = 2000;
+//    let interval = time;
 //    let isPlaying = true;
 //    let swipeStartX = null;
 //    let swipeEndX = null;
@@ -114,13 +112,21 @@ carousel.init();
 //        swipeStartX- swipeEndX < -100 && prev();*/
 //    }
 //
-//    pauseBtn.addEventListener('click', pausePlay);
-//    prevBtn.addEventListener('click', prev);
-//    nextBtn.addEventListener('click', next);
-//    indicatorContainer.addEventListener('click', indicate);
-//    document.addEventListener('keydown', pressKey);
-//    container.addEventListener('touchstart', swipeStart);
-//    container.addEventListener('touchend', swipeEnd);
+//    const initListeners = () => {
+//     pauseBtn.addEventListener('click', pausePlay);
+//     nextBtn.addEventListener('click', next);
+//     prevBtn.addEventListener('click', prev);
+//     indicatorsContainer.addEventListener('click', indicate);
+//     container.addEventListener('touchstart', swipeStart);
+//     container.addEventListener('touchend', swipeEnd);
+//     document.addEventListener('keydown', pressKey);
+//   };
+//    const init = () => {
+//     indicatorsContainer.style.display = 'flex'; // flex
+//     controls.style.display = 'block'; // block
+//     initListeners();
+//     timerID = setInterval(gotoNext, interval);
+//   };
 //
-//    timerID = setInterval(gotoNext, interval);
-//}());
+//    init();
+//}(2000));
