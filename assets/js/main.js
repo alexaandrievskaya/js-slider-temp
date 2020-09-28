@@ -1,10 +1,15 @@
-let carousel;
-carousel = new Carousel();
+//let  carousel = new Carousel();
+let  carousel = new SwipeCarousel({
+    containerID: '#carousel',
+    interval: 1000,
+    slideID: '.slide',
+});
 
 carousel.init();
+//carousel.pausePlay();
 
 
-
+//native JS - обернули в паттерн
 //(function (time) {
 //    let container = document.querySelector('#carousel');
 //    let slides = container.querySelectorAll('.slide');
